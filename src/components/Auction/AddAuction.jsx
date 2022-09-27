@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useContext, useState } from 'react';
+import {
+    Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useDisclosure,
+    Button,
+    Input,
+    Flex,
+    Alert, AlertIcon, AlertDescription, VStack,
+} from '@chakra-ui/react';
+import InputField from './InputField';
+import { Formik } from "formik";
+import * as Yup from "yup";
+import { AuthContext } from '../context/Authentication';
+import { collection, addDoc } from "firebase/firestore";
 
 function AddAuction() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [error, setError] = useState('')
     const { register } = useContext(AuthContext)
 
-    const validate = (values) => {
-        const errors = {};
-        if (values.password !== values.confirmPassword) errors.confirmPassword = 'Confirm password does not matches with password';
-        return errors;
-    }
+
 
     return (
         <>
@@ -41,11 +49,16 @@ function AddAuction() {
                             onSubmit={async (values, actions) => {
                                 alert(JSON.stringify(values, null, 2));
                                 try {
-                                    await register(values.email, values.password)
+                                    const docRef = await addDoc(collection(db, "users"), {
+                                        first: "Ada",
+                                        last: "Lovelace",
+                                        born: 1815
+                                    });
+                                    console.log("Document written with ID: ", docRef.id);
                                     onClose()
-                                } catch (error) {
-                                    setError(error.message)
-                                    console.log(error)
+                                } catch (e) {
+                                    setError(e.message)
+                                    console.error("Error adding document: ", e);
                                 }
                             }}
                         >

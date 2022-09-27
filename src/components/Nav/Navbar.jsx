@@ -4,15 +4,15 @@ import {
   Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure,
   Avatar, Tooltip
 } from '@chakra-ui/react';
-import Logo from '../assets/motosquare.jpg';
-import DefaultProfilePicture from '../assets/defaultProfilePicture.png';
+import Logo from '../../assets/motosquare.jpg';
+import DefaultProfilePicture from '../../assets/defaultProfilePicture.png';
 import { Link } from '@chakra-ui/react'
 import React from "react";
 import { IoMdMenu } from 'react-icons/io';
 import { Link as RouteLink, useLocation } from "react-router-dom";
 import Register from './Register';
 import Login from './Login';
-import { AuthContext } from '../context/Authentication';
+import { AuthContext } from '../../context/Authentication';
 
 export default function Navbar() {
   const { currentUser, logout } = useContext(AuthContext)

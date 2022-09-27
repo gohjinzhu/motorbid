@@ -6,10 +6,10 @@ import {
     Flex,
     Alert, AlertIcon, AlertDescription, VStack,
 } from '@chakra-ui/react';
-import InputField from './InputField';
+import InputField from '../InputField';
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { AuthContext } from '../context/Authentication';
+import { AuthContext } from '../../context/Authentication';
 
 function Register() {
     const { isOpen, onOpen, onClose } = useDisclosure()

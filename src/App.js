@@ -1,8 +1,11 @@
 import React from 'react';
+import { Auctions } from './components/Auction/Auctions';
 
 function App() {
   return (
-    <div>home page!!!</div>
+    <div>
+      <Auctions />
+    </div>
     
   );
 }

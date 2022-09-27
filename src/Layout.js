@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './components/Navbar'
+import Navbar from './components/Nav/Navbar'
 import { Box } from '@chakra-ui/react';
 
 function Layout({ children }) {

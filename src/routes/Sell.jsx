@@ -3,7 +3,7 @@ import {
   Alert, AlertIcon, AlertDescription, Box, Flex,
 } from '@chakra-ui/react';
 import { AuthContext } from '../context/Authentication';
-import { ListingForm } from '../form/ListingForm'
+import { ListingForm } from '../components/Auction/ListingForm'
 
 
 //page for adding auction item

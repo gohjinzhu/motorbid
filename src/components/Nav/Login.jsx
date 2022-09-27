@@ -4,9 +4,9 @@ import {
     Button,Input,Flex, VStack,
     Alert, AlertIcon, AlertDescription,
 } from '@chakra-ui/react';
-import InputField from './InputField';
+import InputField from '../InputField';
 import { Formik } from "formik";
-import { AuthContext } from '../context/Authentication';
+import { AuthContext } from '../../context/Authentication';
 
 function Login() {
     const { isOpen, onOpen, onClose } = useDisclosure()
