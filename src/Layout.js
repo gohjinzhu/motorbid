@@ -11,11 +11,9 @@ function Layout({ children }) {
             <main>
                 {children}
             </main>
-            <footer>
-                <Box textAlign='center' p='5' color='gray.600' borderTop='1px' borderColor='gray.100' >
-                    &copy;2022 Motorsquare
-                </Box>
-            </footer>
+            <Box textAlign='center' p='5' color='gray.600' borderTop='1px' borderColor='gray.100' mt='auto' as='footer'>
+                &copy;2022 Motosquare
+            </Box>
         </Box>
     )
 }

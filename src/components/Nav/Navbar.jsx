@@ -25,7 +25,7 @@ export default function Navbar() {
         px={{ base: '10', md: 'auto' }}
         py="5"
         align="center"
-        justify={{ base: 'space-between', md: 'space-around' }}
+        justify='space-between'
       >
         <Box>
           <Link as={RouteLink} to='/'>
@@ -33,8 +33,8 @@ export default function Navbar() {
           </Link>
         </Box>
         <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }}>
-          <Link as={RouteLink} to='/' style={{ textDecoration: 'none' }}>
-            <Button variant={pathname === '/' ? 'active' : 'link'}>Auction</Button>
+          <Link as={RouteLink} to='/auction' style={{ textDecoration: 'none' }}>
+            <Button variant={pathname === '/auction' ? 'active' : 'link'}>Auction</Button>
           </Link>
           <Link as={RouteLink} to='/sell' style={{ textDecoration: 'none' }}>
             <Button variant={pathname === '/sell' ? 'active' : 'link'}>Sell</Button>

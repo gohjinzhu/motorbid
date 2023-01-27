@@ -43,7 +43,6 @@ function Login() {
                                 <VStack as='form' onSubmit={formik.handleSubmit} spacing={3}>
                                     <InputField as={Input} name="email" type="email" placeholder=" " label="Email" />
                                     <InputField as={Input} name="password" type="password" placeholder=" " label="Password" />
-                                    <InputField as={Input} name="confirmPassword" type="password" placeholder=" " label="Confirm password" />
                                     <Flex my={3} justifyContent='flex-end'>
                                         <Button type='submit' colorScheme='blue'>
                                             Submit
